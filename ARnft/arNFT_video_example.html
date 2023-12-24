@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +10,12 @@
 <body>
 
       <a
-          href="https://https://i.ibb.co/KjQYrHK/s.png"
+          href="https://raw.githubusercontent.com/artoolkitx/artoolkit5/master/doc/Marker%20images/pinball.jpg"
           class="ui marker"
           target="_blank">
           🖼 Marker Image
       </a>
-			<video
+	        <video
 				loop
 				autoplay
 				muted
@@ -22,7 +23,7 @@
 				playsinline
 				crossOrigin="anonymous"
 				id="arvideo">
-				<source src="https://github.com/ozanradio/vid/raw/master/ARnft/zoom_video_playing_bass_guitar_seed1063964989529615272.mp4" type='video/mp4'>
+				<source src="https://avo-content-dev.s3.amazonaws.com/videos/bg_1588085276090.mp4" type='video/mp4'>
 			</video>
 
 		<script src="../resources/three.min.js"></script>
@@ -30,9 +31,10 @@
 		<script src="../resources/ARnft.js"></script>
 
 		<script>
+			
 			let width = 640;
-      let height = 480;
-			ARnft.ARnft.init(width, height, ["ARnft/DataNFT/s"], ['s'], 'config.json', true)
+            let height = 480;
+	        ARnft.ARnft.init(width, height, ["kalwalt-interactivity-AR/ARnft/DataNFT/pinball"], ['pinball'], 'config.json', true)
 				.then((nft) => {
 					document.addEventListener('containerEvent', function (ev) {
 	
@@ -65,7 +67,7 @@
 						nftAddTJS.oef = true;
                         // Set width, height and width and height number of segments of the PlaneGeometry.
                         let imgConfig = {w: 1, h: 1, ws: 1, hs: 1};
-                        nftAddTJS.addVideo('arvideo', 's', 180, imgConfig, false);
+                        nftAddTJS.addVideo('arvideo', 'pinball', 180, imgConfig, false);
 	
 						const tick = () => {
 							sceneThreejs.draw();
@@ -77,6 +79,7 @@
 					console.log(error);
 				});
 		</script>
+
 </body>
 
 </html>
